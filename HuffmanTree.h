@@ -1,0 +1,12 @@
+// MZMTIN002
+
+#ifndef ASSIGNMENT_3_HUFFMANTREE_H
+#define ASSIGNMENT_3_HUFFMANTREE_H
+
+
+class HuffmanTree {
+
+};
+
+
+#endif //ASSIGNMENT_3_HUFFMANTREE_H
