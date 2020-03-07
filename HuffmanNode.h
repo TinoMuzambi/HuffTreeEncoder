@@ -6,10 +6,9 @@
 
 class HuffmanNode {
 public:
-    virtual ~HuffmanNode();
-
-public:
     HuffmanNode();
+
+    ~HuffmanNode();
 };
 
 
