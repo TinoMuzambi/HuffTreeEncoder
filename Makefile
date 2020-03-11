@@ -18,3 +18,6 @@ clean:
 	@rm -f *.dat
 	@rm -f *.bin
 	@rm -f *.raw
+
+run:
+	./huffencode
