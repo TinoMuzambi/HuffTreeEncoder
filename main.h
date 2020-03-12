@@ -5,6 +5,7 @@
 
 using namespace std;
 #include <iostream>
+#include "HuffmanTree.h"
 #include "string"
 
 

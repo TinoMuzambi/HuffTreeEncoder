@@ -14,6 +14,8 @@ int main(int argc, char* argv[]) {
         cout << "nah nigga" << endl;
     }
 
+    HuffmanTree tree;
+    tree.populateMap();
 
     return 0;
 }
