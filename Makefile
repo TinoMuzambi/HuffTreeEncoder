@@ -2,7 +2,7 @@
 # MZMTIN002
 
 default:
-	@g++ main.cpp HuffmanNode.cpp HuffmanTree.cpp -o huffencode
+	g++ main.cpp HuffmanNode.cpp HuffmanTree.cpp -o huffencode
 
 main.run: main.o HuffmanNode.o HuffmanTree.o
 	g++ main.run main.o HuffmanNode.o HuffmanTree.o
@@ -18,6 +18,7 @@ clean:
 	@rm -f *.dat
 	@rm -f *.bin
 	@rm -f *.raw
+	@echo "Clean done!"
 
 run:
 	./huffencode
