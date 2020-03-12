@@ -6,7 +6,7 @@ HuffmanTree::HuffmanTree() {
 }
 
 HuffmanTree::~HuffmanTree() {
-
+    //head = nullptr; // TODO fix this.
 }
 
 void HuffmanTree::compressData() {

@@ -3,6 +3,10 @@
 #ifndef ASSIGNMENT_3_MAIN_H
 #define ASSIGNMENT_3_MAIN_H
 
+using namespace std;
+#include <iostream>
+#include "string"
+
 
 class main {
 
