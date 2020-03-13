@@ -21,16 +21,14 @@ bool MZMTIN002::HuffmanTree::compare(const HuffmanNode &a, const HuffmanNode &b)
     return false;
 }
 
-void MZMTIN002::HuffmanTree::populateMap() {
-    string str = "the quick brown fox jumped over the lazy dog.";
+void MZMTIN002::HuffmanTree::populateMap(string str) {
     std::unordered_map<char, int> counts;
-    for_each(begin(str),
-                  end(str),
-                  [&counts](const char& c) {
-                      counts[c]++;
-                  });
+    for_each(begin(str), end(str),[&counts](const char& c) {
+        counts[c]++;
+    });
 
-    for(auto& pair: counts) {
+    count = counts;
+    for(auto& pair: count) {
         cout << '{' << pair.first << ": " << pair.second
                   << '}' << '\n';
     }

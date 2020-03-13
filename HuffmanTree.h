@@ -17,9 +17,13 @@ namespace MZMTIN002 {
         shared_ptr<HuffmanTree> head;
         unordered_map<char, int> count;
     public:
-        HuffmanTree();
+        HuffmanTree(); // Default constructor
 
-        ~HuffmanTree();
+        ~HuffmanTree(); // Destructor
+
+        HuffmanTree(const HuffmanTree &rhs) { // Copy constructor
+
+        }
 
         void compressData();
 
@@ -27,7 +31,7 @@ namespace MZMTIN002 {
 
         bool compare(const HuffmanNode &a, const HuffmanNode &b);
 
-        void populateMap();
+        void populateMap(string str);
 
     };
 }

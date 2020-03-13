@@ -14,8 +14,9 @@ int main(int argc, char* argv[]) {
         cout << "nah nigga" << endl;
     }
 
-    HuffmanTree tree;
-    tree.populateMap();
+    MZMTIN002::HuffmanTree tree;
+    string str = "the quick brown fox jumped over the lazy dog.";
+    tree.populateMap(str);
 
     return 0;
 }
