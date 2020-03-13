@@ -2,26 +2,26 @@
 
 #include "HuffmanTree.h"
 
-HuffmanTree::HuffmanTree() {
+MZMTIN002::HuffmanTree::HuffmanTree() {
 }
 
-HuffmanTree::~HuffmanTree() {
+MZMTIN002::HuffmanTree::~HuffmanTree() {
     //head = nullptr; // TODO fix this.
 }
 
-void HuffmanTree::compressData() {
+void MZMTIN002::HuffmanTree::compressData() {
 
 }
 
-void HuffmanTree::buildTree() {
+void MZMTIN002::HuffmanTree::buildTree() {
 
 }
 
-bool HuffmanTree::compare(const HuffmanNode &a, const HuffmanNode &b) {
+bool MZMTIN002::HuffmanTree::compare(const HuffmanNode &a, const HuffmanNode &b) {
     return false;
 }
 
-void HuffmanTree::populateMap() {
+void MZMTIN002::HuffmanTree::populateMap() {
     string str = "the quick brown fox jumped over the lazy dog.";
     std::unordered_map<char, int> counts;
     for_each(begin(str),
@@ -36,8 +36,3 @@ void HuffmanTree::populateMap() {
     }
 }
 
-bool compare(const HuffmanNode& a, const HuffmanNode& b)
-{
-    //return (a < b); // or > if the algorithm requires that ordering
-    return 0;
-}

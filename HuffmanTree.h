@@ -11,24 +11,25 @@
 #include <iostream>
 using namespace std;
 
-class HuffmanTree {
-private:
-    shared_ptr<HuffmanTree> head;
-    unordered_map<char, int> count;
-public:
-    HuffmanTree();
+namespace MZMTIN002 {
+    class HuffmanTree {
+    private:
+        shared_ptr<HuffmanTree> head;
+        unordered_map<char, int> count;
+    public:
+        HuffmanTree();
 
-    ~HuffmanTree();
+        ~HuffmanTree();
 
-    void compressData();
+        void compressData();
 
-    void buildTree();
+        void buildTree();
 
-    bool compare(const HuffmanNode& a, const HuffmanNode& b);
+        bool compare(const HuffmanNode &a, const HuffmanNode &b);
 
-    void populateMap();
+        void populateMap();
 
-};
-
+    };
+}
 
 #endif //ASSIGNMENT_3_HUFFMANTREE_H
