@@ -10,8 +10,10 @@ using namespace std;
 
 class HuffmanNode {
 private:
-    shared_ptr<HuffmanNode> left;
-    shared_ptr<HuffmanNode> right;
+//    shared_ptr<HuffmanNode> left;
+//    shared_ptr<HuffmanNode> right;
+    char letter;
+    int freq;
 public:
     HuffmanNode();
 

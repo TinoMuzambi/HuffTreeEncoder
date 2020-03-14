@@ -9,27 +9,39 @@
 #include <unordered_map>
 #include <algorithm>
 #include <iostream>
+#include <queue>
 using namespace std;
 
 namespace MZMTIN002 {
     class HuffmanTree {
     private:
-        shared_ptr<HuffmanTree> head;
+        shared_ptr<HuffmanNode> head;
         unordered_map<char, int> count;
+        class compare {
+        public:
+            bool operator()(const HuffmanNode &a, const HuffmanNode &b) {
+//                return (a < b);
+                return true;
+            }
+
+        };
+        priority_queue<HuffmanNode, vector<HuffmanNode>, compare> queue; // TODO Fix this.
     public:
         HuffmanTree(); // Default constructor
 
         ~HuffmanTree(); // Destructor
 
-        HuffmanTree(const HuffmanTree &rhs) { // Copy constructor
+        HuffmanTree(const HuffmanTree &rhs); // Copy constructor
 
-        }
+        HuffmanTree(HuffmanTree &&rhs); // Move constructor
+
+        HuffmanTree & operator=(HuffmanTree &&rhs); // Move assignment constructor
+
+        HuffmanTree & operator=(HuffmanTree &rhs); // Assignment constructor
 
         void compressData();
 
         void buildTree();
-
-        bool compare(const HuffmanNode &a, const HuffmanNode &b);
 
         void populateMap(string str);
 
