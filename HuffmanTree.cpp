@@ -30,3 +30,19 @@ void MZMTIN002::HuffmanTree::populateMap(const string str) {
     }
 }
 
+MZMTIN002::HuffmanTree::HuffmanTree(const MZMTIN002::HuffmanTree &rhs) {
+
+}
+
+MZMTIN002::HuffmanTree &MZMTIN002::HuffmanTree::operator=(MZMTIN002::HuffmanTree &&rhs) {
+    return rhs;
+}
+
+MZMTIN002::HuffmanTree &MZMTIN002::HuffmanTree::operator=(MZMTIN002::HuffmanTree &rhs) {
+    return rhs;
+}
+
+MZMTIN002::HuffmanTree::HuffmanTree(MZMTIN002::HuffmanTree &&rhs) {
+
+}
+
