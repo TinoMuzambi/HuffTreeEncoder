@@ -16,7 +16,7 @@ namespace MZMTIN002 {
     class HuffmanTree {
     private:
         shared_ptr<HuffmanNode> head;
-        unordered_map<char, int> count;
+
         class compare {
         public:
             bool operator()(const HuffmanNode &a, const HuffmanNode &b) {
@@ -25,7 +25,7 @@ namespace MZMTIN002 {
             }
 
         };
-        priority_queue<HuffmanNode, vector<HuffmanNode>, compare> queue; // TODO Fix this.
+        priority_queue<HuffmanNode, vector<HuffmanNode>, compare> queue;
     public:
         HuffmanTree(); // Default constructor
 
@@ -45,6 +45,7 @@ namespace MZMTIN002 {
 
         void populateMap(string str);
 
+        unordered_map<char, int> count;
     };
 }
 

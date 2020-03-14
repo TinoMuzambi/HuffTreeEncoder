@@ -21,4 +21,4 @@ clean:
 	@echo "Clean done!"
 
 run:
-	./huffencode in.txt out.txt
+	./huffencode testin.txt out.txt

@@ -18,6 +18,8 @@ public:
     HuffmanNode();
 
     ~HuffmanNode();
+
+    bool operator <(const HuffmanNode& rhs);
 };
 
 

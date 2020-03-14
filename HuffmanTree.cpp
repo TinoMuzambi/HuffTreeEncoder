@@ -14,20 +14,20 @@ void MZMTIN002::HuffmanTree::compressData() {
 }
 
 void MZMTIN002::HuffmanTree::buildTree() {
-
+    for (auto element : count) {
+        cout << element.first << " " << element.second << endl;
+//        shared_ptr<HuffmanNode> node = HuffmanNode();
+    }
 }
 
 void MZMTIN002::HuffmanTree::populateMap(const string str) {
-    std::unordered_map<char, int> counts;
+    std::unordered_map<char, int> counts = count;
     for_each(begin(str), end(str),[&counts](const char& c) {
         counts[c]++;
     });
 
     count = counts;
-    for(auto& pair: count) {
-        cout << '{' << pair.first << ": " << pair.second
-                  << '}' << '\n';
-    }
+
 }
 
 MZMTIN002::HuffmanTree::HuffmanTree(const MZMTIN002::HuffmanTree &rhs) {
