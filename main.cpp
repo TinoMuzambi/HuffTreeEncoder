@@ -4,6 +4,7 @@
 #include "main.h"
 
 int main(int argc, char* argv[]) {
+    cout << "In main func" << endl;
     string in_file;
     string out_file;
 
@@ -20,15 +21,14 @@ int main(int argc, char* argv[]) {
     ifstream in(in_file);
     string line;
     while (getline(in, line)) {
-        tree.populateMap(line);
+        tree.buildTree(line);
     }
 
-    for(auto& pair: tree.count) { //TODO remove this.
-        cout << '{' << pair.first << ": " << pair.second
-             << '}' << '\n';
-    }
-
-    tree.buildTree();
+    cout << "Back in main func" << endl;
+//    for(auto& pair: tree.count) { //TODO remove this.
+//        cout << '{' << pair.first << ": " << pair.second
+//             << '}' << '\n';
+//    }
 
     return 0;
 }

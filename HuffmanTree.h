@@ -17,13 +17,11 @@ namespace MZMTIN002 {
     private:
         shared_ptr<HuffmanNode> head;
 
-        class compare {
-        public:
+        struct compare {
             bool operator()(const HuffmanNode &a, const HuffmanNode &b) {
-//                return (a < b);
-                return true;
+                return (a.freq < b.freq);
+    //                return true;
             }
-
         };
         priority_queue<HuffmanNode, vector<HuffmanNode>, compare> queue;
     public:
@@ -41,11 +39,20 @@ namespace MZMTIN002 {
 
         void compressData();
 
-        void buildTree();
+        void buildTree(string str);
 
         void populateMap(string str);
 
         unordered_map<char, int> count;
+
+        /**
+         * Traverse the Huffman tree and store huffman codes in a map.
+         * @param str string to be encoded
+         * @param huffmanCode map the codes will be stored in.
+         */
+        void encode(shared_ptr<HuffmanNode> root, string str, unordered_map<char, string> &huffmanCode);
+
+        void decode(shared_ptr<HuffmanNode> root, int &index, string str);
     };
 }
 

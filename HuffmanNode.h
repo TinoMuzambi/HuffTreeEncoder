@@ -4,22 +4,24 @@
 #define ASSIGNMENT_3_HUFFMANNODE_H
 
 #include <memory>
+#include "iostream"
 #include <bits/shared_ptr.h>
 
 using namespace std;
 
 class HuffmanNode {
-private:
-//    shared_ptr<HuffmanNode> left;
-//    shared_ptr<HuffmanNode> right;
-    char letter;
-    int freq;
 public:
     HuffmanNode();
 
     ~HuffmanNode();
 
+    shared_ptr<HuffmanNode> left, right;
+    char letter;
+    int freq;
+
     bool operator <(const HuffmanNode& rhs);
+
+    HuffmanNode getHuffNode(char letter, int freq, shared_ptr<HuffmanNode> left, shared_ptr<HuffmanNode> right);
 };
 
 
